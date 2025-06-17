@@ -55,5 +55,12 @@
 
     map.setView(map.unproject([centerX, centerY], zoom), zoom);
   </script>
+
+  <script>
+    window.addEventListener("load", function () {
+      const height = document.documentElement.scrollHeight;
+      parent.postMessage({ height: height }, "*");
+    });
+  </script>
 </body>
 </html>
